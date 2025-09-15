@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- [GitHub Repository](https://github.com/maziarja/kanban-task-management)
-- [Live Demo](https://kanban-task-management-sigma-umber.vercel.app/)
+- [GitHub Repository](https://github.com/maziarja/personal-finance-app)
+- [Live Demo](https://personal-finance-app-virid.vercel.app)
 
 ## My process
 
