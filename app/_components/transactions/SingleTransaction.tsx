@@ -17,7 +17,7 @@ function SingleTransaction({
   isOverviewPage = false,
 }: SingleTransactionProps) {
   const { amount, avatar, category, date, name } = transaction;
-
+  console.log(avatar);
   return (
     <div className="flex flex-col gap-200">
       <div
@@ -25,7 +25,7 @@ function SingleTransaction({
       >
         <div className="flex items-center gap-150">
           <Image
-            src={`/${avatar}`}
+            src={`/${avatar.replace("./", "")}`}
             alt="logo"
             height={32}
             width={32}
