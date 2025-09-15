@@ -24,7 +24,9 @@ type PageProps = {
 async function Page({ searchParams }: PageProps) {
   const session = await auth();
   if (!session?.user) redirect("/login");
-  const { page, category, sortBy, query } = await searchParams;
+
+  searchParams = await searchParams;
+  const { page, category, sortBy, query } = searchParams;
 
   const currentPage = Number(page) || 1;
   const currentCategory = category || "All Transactions";

@@ -21,7 +21,8 @@ async function Page({ searchParams }: PageProps) {
   const session = await auth();
   if (!session?.user) redirect("/login");
 
-  const { query, sortBy } = await searchParams;
+  const searchParam = await searchParams;
+  const { query, sortBy } = searchParam;
 
   const { alreadyPaidBills, dueSoonBills, upcomingBills } =
     await getRecurringBills(query || "");
