@@ -162,7 +162,7 @@ function BudgetContainer({
                 <div className="flex items-center gap-200">
                   <Image
                     className="rounded-full"
-                    src={`/${transaction.avatar}`}
+                    src={`/${transaction.avatar.replace("./", "")}`}
                     width={32}
                     height={32}
                     alt="avatar"

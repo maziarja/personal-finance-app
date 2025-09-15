@@ -69,7 +69,7 @@ function RecurringBillsContainer({
       <div className="@container flex flex-col gap-100 rounded-lg md:flex-row md:items-center md:gap-400">
         <div className="flex items-center gap-200 md:flex-1/5 lg:@[422px]:flex-1 lg:@[460px]:flex-1/5">
           <Image
-            src={`/${avatar}`}
+            src={`/${avatar.replace("./", "")}`}
             alt="logo"
             height={32}
             width={32}
