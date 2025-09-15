@@ -62,7 +62,7 @@ function Sidebar() {
           className={`flex flex-1 items-center justify-center gap-100 rounded-t-lg pt-100 pb-150 lg:w-[92%] lg:flex-0 lg:justify-start lg:gap-50 lg:rounded-t-none lg:rounded-r-lg lg:pt-0 lg:pb-0 ${nav.url === pathname ? "bg-beige-100" : ""} ${nav.url === pathname ? "border-green border-b-4 lg:border-b-0 lg:border-l-4" : ""}`}
         >
           <button
-            className={`${nav.url === pathname ? "fill-green" : "fill-grey-300"} flex flex-col items-center gap-50 lg:flex-row lg:gap-200 lg:px-400 lg:py-200`}
+            className={`${nav.url === pathname ? "fill-green" : "fill-grey-300"} flex cursor-pointer flex-col items-center gap-50 lg:flex-row lg:gap-200 lg:px-400 lg:py-200`}
           >
             {nav.icon}
             <span
