@@ -12,7 +12,7 @@ type DropdownItem = {
 
 function DropdownMenu({ items }: { items: DropdownItem[] }) {
   return (
-    <div className="flex flex-col gap-150 rounded-lg bg-white px-250 py-150 drop-shadow-2xl">
+    <div className="flex flex-col gap-150 rounded-lg bg-white px-250 py-150 shadow-lg drop-shadow-lg">
       {items.map((item, i) => {
         return (
           <React.Fragment key={i}>
