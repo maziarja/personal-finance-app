@@ -14,10 +14,10 @@ type Category = TransactionType["category"];
 
 type PageProps = {
   searchParams: {
-    page: string;
-    category: Category;
-    sortBy: string;
-    query: string;
+    page?: string;
+    category?: Category;
+    sortBy?: string;
+    query?: string;
   };
 };
 
@@ -25,8 +25,7 @@ async function Page({ searchParams }: PageProps) {
   const session = await auth();
   if (!session?.user) redirect("/login");
 
-  searchParams = await searchParams;
-  const { page, category, sortBy, query } = searchParams;
+  const { page, category, sortBy, query } = await searchParams;
 
   const currentPage = Number(page) || 1;
   const currentCategory = category || "All Transactions";

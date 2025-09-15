@@ -12,8 +12,8 @@ export const metadata = {
 
 type PageProps = {
   searchParams: {
-    query: string;
-    sortBy: string;
+    query?: string;
+    sortBy?: string;
   };
 };
 
@@ -21,8 +21,7 @@ async function Page({ searchParams }: PageProps) {
   const session = await auth();
   if (!session?.user) redirect("/login");
 
-  const searchParam = await searchParams;
-  const { query, sortBy } = searchParam;
+  const { query, sortBy } = await searchParams;
 
   const { alreadyPaidBills, dueSoonBills, upcomingBills } =
     await getRecurringBills(query || "");
