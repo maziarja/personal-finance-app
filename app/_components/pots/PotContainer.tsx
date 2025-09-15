@@ -25,7 +25,6 @@ function PotContainer({ pot, usedColor }: PotContainerProps) {
   useEffect(() => {
     setTotalProgress(totalPerPercent);
   }, [totalPerPercent]);
-
   return (
     <div className="relative flex flex-col gap-400 rounded-xl bg-white px-250 py-300">
       <Modal>

@@ -82,7 +82,7 @@ function ThemeInput({
         )}
       </div>
       {dropdown && (
-        <div className="absolute top-20 flex h-74.5 w-full flex-col gap-150 overflow-y-scroll rounded-lg bg-white px-250 py-150 drop-shadow-xl">
+        <div className="flex h-55 w-full flex-col gap-150 overflow-y-scroll rounded-lg bg-white px-250 py-150 drop-shadow-2xl md:h-74.5">
           {colorTag.map((c) => {
             return (
               <React.Fragment key={c.name}>
