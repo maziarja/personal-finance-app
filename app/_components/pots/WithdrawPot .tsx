@@ -97,9 +97,12 @@ function WithdrawPot({ close, pot }: WithdrawPotType) {
                 id={"amount"}
                 value={withdrawAmount}
                 onChange={(e) => {
-                  if (+e.target.value < 0 || +e.target.value > pot.total)
-                    return;
-                  setWithdrawAmount(e.target.value);
+                  if (+e.target.value < 0) return;
+                  if (+e.target.value > pot.total) {
+                    setWithdrawAmount(String(pot.total));
+                  } else {
+                    setWithdrawAmount(e.target.value);
+                  }
                 }}
               />
               {error && (

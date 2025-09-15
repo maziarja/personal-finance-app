@@ -95,12 +95,12 @@ function AddMoneyPot({ pot, close }: AddMoneyPotType) {
                 id={"amount"}
                 value={addMoneyAmount}
                 onChange={(e) => {
-                  if (
-                    +e.target.value < 0 ||
-                    +e.target.value + pot.total > pot.target
-                  )
-                    return;
-                  setAddMoneyAmount(e.target.value);
+                  if (+e.target.value < 0) return;
+                  if (+e.target.value + pot.total > pot.target) {
+                    setAddMoneyAmount(String(pot.target - pot.total));
+                  } else {
+                    setAddMoneyAmount(e.target.value);
+                  }
                 }}
               />
               {error && (
