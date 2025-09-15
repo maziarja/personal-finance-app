@@ -13,12 +13,12 @@ export const metadata = {
 type Category = TransactionType["category"];
 
 type PageProps = {
-  searchParams: {
+  searchParams: Promise<{
     page?: string;
     category?: Category;
     sortBy?: string;
     query?: string;
-  };
+  }>;
 };
 
 async function Page({ searchParams }: PageProps) {

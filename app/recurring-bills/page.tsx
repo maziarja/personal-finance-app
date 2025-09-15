@@ -11,10 +11,10 @@ export const metadata = {
 };
 
 type PageProps = {
-  searchParams: {
+  searchParams: Promise<{
     query?: string;
     sortBy?: string;
-  };
+  }>;
 };
 
 async function Page({ searchParams }: PageProps) {
