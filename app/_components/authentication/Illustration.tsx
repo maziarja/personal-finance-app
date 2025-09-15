@@ -2,7 +2,7 @@ import logoLarge from "@/public/assets/images/logo-large.svg";
 import Image from "next/image";
 function Illustration() {
   return (
-    <div className="m-250 hidden max-w-140 rounded-xl bg-[url('/assets/images/illustration-authentication.svg')] bg-center bg-no-repeat p-500 lg:flex lg:flex-col">
+    <div className="m-250 hidden max-w-140 rounded-xl bg-[url('/assets/images/illustration-authentication.svg')] bg-cover bg-center bg-no-repeat p-500 lg:flex lg:flex-col">
       <Image src={logoLarge} width={0} height={0} alt="Logo" />
       <div className="mt-auto flex w-[90%] flex-col gap-200">
         <p className="text-preset-1 text-white">
