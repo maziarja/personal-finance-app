@@ -17,7 +17,6 @@ function SingleTransaction({
   isOverviewPage = false,
 }: SingleTransactionProps) {
   const { amount, avatar, category, date, name } = transaction;
-  console.log(avatar);
   return (
     <div className="flex flex-col gap-200">
       <div

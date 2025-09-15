@@ -16,7 +16,8 @@ function Input({
   placeholder?: string;
 }) {
   const [value, setValue] = useState<string>(defaultValue || "");
-  const [char, setChar] = useState(value.length);
+  const [char, setChar] = useState(limit);
+
   return (
     <div className="flex flex-col gap-50">
       <label htmlFor={name} className="text-preset-5-bold text-grey-500">
@@ -30,16 +31,16 @@ function Input({
           type="text"
           name={name}
           id={name}
-          value={value.slice(0, limit && limit - 1)}
+          value={value.slice(0, limit && limit)}
           onChange={(e) => {
             setValue(e.target.value);
-            setChar(e.target.value.length);
+            setChar(limit && limit - e.target.value.length);
           }}
         />
       </div>
       {limit && (
         <p className="text-preset-5 text-grey-500 ml-auto">
-          {char !== 0 && `${char} of`} {limit} characters left
+          {`${char && char <= 0 ? 0 : char} of`} {limit} characters left
         </p>
       )}
     </div>

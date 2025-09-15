@@ -31,6 +31,7 @@ function Pagination({ numOfTransactions }: PaginationProps) {
     return ["…", current - 1, current, total];
   }
   const mobilePages = getMobilePages(currentPage, totalPages);
+
   return (
     <div className="flex items-center justify-between pt-300">
       <Link
@@ -44,7 +45,11 @@ function Pagination({ numOfTransactions }: PaginationProps) {
             currentPage > 1 ? "text-grey-500" : "text-gray-300"
           }`}
         />
-        <p className="text-preset-4 text-grey-900 hidden group-hover:text-white md:block">
+        <p
+          className={`text-preset-4 hidden group-hover:text-white md:block ${
+            currentPage > 1 ? "text-grey-900" : "text-gray-300"
+          }`}
+        >
           Prev
         </p>
       </Link>
@@ -93,7 +98,11 @@ function Pagination({ numOfTransactions }: PaginationProps) {
           currentPage < totalPages ? "ring-beige-500" : "ring-gray-300"
         }`}
       >
-        <p className="text-preset-4 text-grey-900 hidden group-hover:text-white md:block">
+        <p
+          className={`text-preset-4 hidden group-hover:text-white md:block ${
+            currentPage < totalPages ? "text-grey-900" : "text-gray-300"
+          }`}
+        >
           Next
         </p>
         <FaCaretRight

@@ -27,7 +27,7 @@ async function Page({ searchParams }: PageProps) {
 
   const { page, category, sortBy, query } = await searchParams;
 
-  const currentPage = Number(page) || 1;
+  const currentPage = Number(page) <= 0 ? 1 : Number(page) || 1;
   const currentCategory = category || "All Transactions";
   const currentSortBy = sortBy || "Latest";
   const currentQuery = query || "";
